@@ -6,7 +6,40 @@ class BotonGordo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return _BotonGordoBackground();
+    return Stack(
+      children: [
+        _BotonGordoBackground(),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            SizedBox(
+              height: 140,
+              width: 40,
+            ),
+            FaIcon(
+              FontAwesomeIcons.carBurst,
+              color: Colors.white,
+              size: 40,
+            ),
+            SizedBox(width: 20),
+            Expanded(
+              child: Text(
+                'Motor Accident',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 18,
+                ),
+              ),
+            ),
+            FaIcon(
+              FontAwesomeIcons.chevronRight,
+              color: Colors.white,
+            ),
+            SizedBox(width: 40),
+          ],
+        ),
+      ],
+    );
   }
 }
 
